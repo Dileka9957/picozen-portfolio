@@ -63,7 +63,7 @@ export const FloatingNav = ({ navItems }: FloatingNavProps) => {
     <AnimatePresence mode="wait">
       <motion.div
         transition={{ duration: 0.6 }}
-        className="px-10 inset-x-0 top-0 z-[5000] mx-auto flex flex-col sm:flex-row items-center justify-center space-x-8 rounded-full border border-transparent bg-[#0a0a0a] dark:bg-[#0a0a0a] py-4 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] dark:border-white/[0.2]"
+        className="px-10 inset-x-0 top-0 z-[5000] mx-auto flex flex-col sm:flex-row items-center justify-center space-x-16 rounded-full border border-transparent bg-[#0a0a0a] dark:bg-[#0a0a0a] py-4 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] dark:border-white/[0.2]"
         style={{
           background: "rgba(255, 255, 255, 0.03)",
           boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
@@ -76,7 +76,7 @@ export const FloatingNav = ({ navItems }: FloatingNavProps) => {
             key={`link-${idx}`}
             href={navItem.link}
             onClick={(e) => handleNavClick(e, navItem.link, navItem.isAnchor)}
-            className="flex flex-col sm:flex-row cursor-pointer items-center sm:justify-between hover:text-teal-500 hover:opacity-[0.9] dark:text-teal-400 dark:hover:text-teal-500"
+            className="flex flex-col sm:flex-row cursor-pointer items-center sm:justify-between text-teal-600 hover:text-teal-500 hover:opacity-[0.9] dark:text-teal-500 dark:hover:text-teal-500"
           >
             {navItem.icon && <span className="mr-2">{navItem.icon}</span>}
             <span className="text-md">{navItem.name}</span>
@@ -93,7 +93,7 @@ export const FloatingNavBar = () => {
       name: "Home",
       link: "/",
       icon: (
-        <FaBriefcase className="h-5 w-5 text-teal-500 dark:text-teal-400 dark:hover:text-teal-500" />
+        <FaBriefcase className="h-5 w-5 text-teal-600 dark:text-teal-500 dark:hover:text-teal-500" />
       ),
       isAnchor: false,
     },
@@ -101,7 +101,7 @@ export const FloatingNavBar = () => {
       name: "About",
       link: "/about",
       icon: (
-        <FaUser className="h-5 w-5 text-teal-400 dark:text-teal-400 dark:hover:text-teal-500" />
+        <FaUser className="h-5 w-5 text-teal-600 dark:text-teal-500 dark:hover:text-teal-500" />
       ),
       isAnchor: false,
     },
@@ -109,7 +109,7 @@ export const FloatingNavBar = () => {
       name: "Projects",
       link: "#projects-section",
       icon: (
-        <FaProjectDiagram className="h-5 w-5 text-teal-400 dark:text-teal-400 dark:hover:text-teal-500" />
+        <FaProjectDiagram className="h-5 w-5 text-teal-600 dark:text-teal-500 dark:hover:text-teal-500" />
       ),
       isAnchor: true,
     },
@@ -117,14 +117,14 @@ export const FloatingNavBar = () => {
       name: "Contact",
       link: "#contact-section",
       icon: (
-        <FaEnvelope className="h-5 w-5 text-teal-400 dark:text-teal-400 dark:hover:text-teal-500" />
+        <FaEnvelope className="h-5 w-5 text-teal-600 dark:text-teal-500 dark:hover:text-teal-500" />
       ),
       isAnchor: true,
     },
   ];
 
   return (
-    <div className="relative mx-auto top-5">
+    <div className="relative mx-auto">
       <FloatingNav navItems={navItems} />
     </div>
   );

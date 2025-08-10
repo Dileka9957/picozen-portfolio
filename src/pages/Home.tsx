@@ -1,5 +1,5 @@
-import HomeHero from "../components/HomeHero";
-import Slider from "../components/Slider";
+import HomeHero from "../components/Home/HomeHero";
+import Slider from "../components/Common/Slider";
 
 export default function Home() {
   return (

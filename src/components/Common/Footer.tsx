@@ -6,20 +6,20 @@ import {
   FaGithub,
 } from "react-icons/fa";
 import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
-import logo from "../assets/logo.webp";
+import logo from "../../assets/logo.webp";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer
-      className=" bg-[#0a0a0a] dark:bg-[#0a0a0a] hover:text-teal-500 hover:opacity-[0.9] dark:text-teal-400 dark:hover:text-teal-500"
-      style={{
-        background: "rgba(255, 255, 255, 0.03)",
-        boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-        backdropFilter: "blur(3px)",
-        // border: "1px solid rgba(255, 255, 255, 0.3)",
-      }}
+      className=""
+      // style={{
+      //   background: "rgba(255, 255, 255, 0.03)",
+      //   boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+      //   backdropFilter: "blur(3px)",
+      //   // border: "1px solid rgba(255, 255, 255, 0.3)",
+      // }}
     >
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -33,42 +33,52 @@ const Footer = () => {
                 className="object-contain w-14 h-14"
               />
             </div>
-            <p className="text-sm text-teal-600 leading-relaxed py-4">
+            <p className="text-sm text-gray-800 dark:text-[#608585] leading-relaxed py-4">
               {/* Building amazing digital experiences with modern web technologies. */}
               We're passionate about creating solutions that make a difference.
             </p>
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="hover:text-white transition-colors duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" text-teal-600 dark:text-teal-400 hover:text-teal-800 dark:hover:text-teal-800 transition-colors duration-300"
                 aria-label="Facebook"
               >
                 <FaFacebookF size={20} />
               </a>
               <a
                 href="#"
-                className="hover:text-white transition-colors duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" text-teal-600 dark:text-teal-400 hover:text-teal-800 dark:hover:text-teal-800 transition-colors duration-300"
                 aria-label="Twitter"
               >
                 <FaTwitter size={20} />
               </a>
               <a
                 href="#"
-                className="hover:text-white transition-colors duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" text-teal-600 dark:text-teal-400 hover:text-teal-800 dark:hover:text-teal-800 transition-colors duration-300"
                 aria-label="Instagram"
               >
                 <FaInstagram size={20} />
               </a>
               <a
                 href="#"
-                className="hover:text-white transition-colors duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" text-teal-600 dark:text-teal-400 hover:text-teal-800 dark:hover:text-teal-800 transition-colors duration-300"
                 aria-label="LinkedIn"
               >
                 <FaLinkedinIn size={20} />
               </a>
               <a
                 href="#"
-                className="hover:text-white transition-colors duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" text-teal-600 dark:text-teal-400 hover:text-teal-800 dark:hover:text-teal-800 transition-colors duration-300"
                 aria-label="GitHub"
               >
                 <FaGithub size={20} />
@@ -78,14 +88,16 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="  text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-teal-600 dark:text-teal-400  text-lg font-semibold mb-4">
+              Quick Links
+            </h3>
             <ul className="space-y-2">
               {["About Us", "Services", "Portfolio", "Blog", "Careers"].map(
                 (link) => (
                   <li key={link}>
                     <a
                       href="#"
-                      className="text-sm hover:text-white transition-colors duration-300 block py-1"
+                      className="text-sm text-gray-800 dark:text-[#608585] transition-colors duration-300 block py-1"
                     >
                       {link}
                     </a>
@@ -97,7 +109,9 @@ const Footer = () => {
 
           {/* Services */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h3 className="text-lg text-teal-600 dark:text-teal-400 font-semibold mb-4">
+              Services
+            </h3>
             <ul className="space-y-2">
               {[
                 "Web Development",
@@ -109,7 +123,7 @@ const Footer = () => {
                 <li key={service}>
                   <a
                     href="#"
-                    className="text-sm hover:text-white transition-colors duration-300 block py-1"
+                    className="text-sm text-gray-800 dark:text-[#608585] transition-colors duration-300 block py-1"
                   >
                     {service}
                   </a>
@@ -120,14 +134,16 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
-            <div className="space-y-3">
+            <h3 className="text-lg text-teal-600 dark:text-teal-400 font-semibold mb-4">
+              Contact Info
+            </h3>
+            <div className="space-y-3 text-sm text-gray-800 dark:text-[#608585]">
               <div className="flex items-start space-x-3">
                 <MdLocationOn
-                  className="text-teal-400 mt-1 flex-shrink-0"
+                  className="text-teal-600 dark:text-teal-400 mt-1 flex-shrink-0"
                   size={20}
                 />
-                <p className="text-sm">
+                <p>
                   123 Business Street
                   <br />
                   Colombo, Western Province
@@ -136,19 +152,25 @@ const Footer = () => {
                 </p>
               </div>
               <div className="flex items-center space-x-3">
-                <MdPhone className="text-teal-400 flex-shrink-0" size={20} />
+                <MdPhone
+                  className="text-teal-600 dark:text-teal-400 flex-shrink-0"
+                  size={20}
+                />
                 <a
                   href="tel:+94112345678"
-                  className="text-sm hover:text-white transition-colors duration-300"
+                  className="transition-colors duration-300"
                 >
                   +94 11 234 5678
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <MdEmail className="text-teal-400 flex-shrink-0" size={20} />
+                <MdEmail
+                  className="text-teal-600 dark:text-teal-400 flex-shrink-0"
+                  size={20}
+                />
                 <a
                   href="mailto:info@yourcompany.com"
-                  className="text-sm hover:text-white transition-colors duration-300"
+                  className=" transition-colors duration-300"
                 >
                   info@yourcompany.com
                 </a>
@@ -188,29 +210,20 @@ const Footer = () => {
       </div> */}
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-800">
+      <div className="border-t text-gray-600 dark:text-[#608585]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="md:flex md:items-center md:justify-between">
-            <p className="text-sm text-teal-400 text-center md:text-left">
+            <p className="text-sm text-gray-800 dark:text-[#608585] hover:text-white text-center md:text-left">
               © {currentYear} Picozen. All rights reserved.
             </p>
-            <div className="mt-4 md:mt-0 flex flex-wrap justify-center md:justify-end gap-6">
-              <a
-                href="#"
-                className="text-sm text-teal-400 hover:text-white transition-colors duration-300"
-              >
+            <div className="mt-4 md:mt-0 flex flex-wrap justify-center md:justify-end gap-6 text-gray-800 dark:text-[#608585]">
+              <a href="#" className="text-sm transition-colors duration-300">
                 Privacy Policy
               </a>
-              <a
-                href="#"
-                className="text-sm text-teal-400 hover:text-white transition-colors duration-300"
-              >
+              <a href="#" className="text-smtransition-colors duration-300">
                 Terms of Service
               </a>
-              <a
-                href="#"
-                className="text-sm text-teal-400 hover:text-white transition-colors duration-300"
-              >
+              <a href="#" className="text-sm transition-colors duration-300">
                 Cookie Policy
               </a>
             </div>
